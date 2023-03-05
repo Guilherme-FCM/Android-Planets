@@ -1,6 +1,8 @@
 package com.example.planets;
 
+import android.content.Intent;
 import android.content.res.TypedArray;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -11,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener, AdapterView.OnItemLongClickListener {
     private ListView listView;
     private ArrayList<Planet> data;
     private MyAdapter adapter;
@@ -45,7 +47,16 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        Planet item = (Planet) adapterView.getItemAtPosition(i);
-        Toast.makeText(this, "Planeta selecionado: " + item, Toast.LENGTH_SHORT).show();
+        Planet planet = (Planet) adapterView.getItemAtPosition(i);
+        Intent intent = new Intent(MainActivity.this, PlanetActivity.class);
+        intent.putExtra("planet", planet);
+        startActivity(intent);
+    }
+
+    @Override
+    public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
+        Planet planet = (Planet) adapterView.getItemAtPosition(i);
+        Toast.makeText(this, "Planeta selecionado: " + planet.toString(), Toast.LENGTH_SHORT).show();
+        return true;
     }
 }

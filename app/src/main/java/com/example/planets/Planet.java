@@ -1,6 +1,8 @@
 package com.example.planets;
 
-public class Planet {
+import java.io.Serializable;
+
+public class Planet implements Serializable {
     private String name;
     private int image;
 
@@ -27,9 +29,6 @@ public class Planet {
 
     @Override
     public String toString() {
-        return "{" +
-                "name='" + name + '\'' +
-                ", image=" + image +
-                '}';
+        return "{" + "name = '" + name + "', " + "image = " + image + "}";
     }
 }
