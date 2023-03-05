@@ -1,14 +1,17 @@
 package com.example.planets;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class Planet implements Serializable {
     private String name;
     private int image;
+    private String[] curiosities;
 
-    public Planet(String name, int image) {
+    public Planet(String name, int image, String[] curiosities) {
         this.name = name;
         this.image = image;
+        this.curiosities = curiosities;
     }
 
     public String getName() {
@@ -25,6 +28,14 @@ public class Planet implements Serializable {
 
     public void setImage(int image) {
         this.image = image;
+    }
+
+    public String[] getCuriosities() {
+        return curiosities;
+    }
+
+    public void setCuriosities(String[] curiosities) {
+        this.curiosities = curiosities;
     }
 
     @Override

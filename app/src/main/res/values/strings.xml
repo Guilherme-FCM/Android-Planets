@@ -1,24 +1,15 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Planets</string>
 
-    <string name="mercurio">Mercúrio</string>
-    <string name="venus">Vênus</string>
-    <string name="terra">Terra</string>
-    <string name="marte">Marte</string>
-    <string name="jupiter">Júpiter</string>
-    <string name="saturno">Saturno</string>
-    <string name="urano">Urano</string>
-    <string name="netuno">Netuno</string>
-
     <string-array name="planets">
-        <item>@string/mercurio</item>
-        <item>@string/venus</item>
-        <item>@string/terra</item>
-        <item>@string/marte</item>
-        <item>@string/jupiter</item>
-        <item>@string/saturno</item>
-        <item>@string/urano</item>
-        <item>@string/netuno</item>
+        <item>Mercúrio</item>
+        <item>Vênus</item>
+        <item>Terra</item>
+        <item>Marte</item>
+        <item>Júpiter</item>
+        <item>Saturno</item>
+        <item>Urano</item>
+        <item>Netuno</item>
     </string-array>
 
     <array name="planet_images">
@@ -30,5 +21,39 @@
         <item>@drawable/saturno</item>
         <item>@drawable/urano</item>
         <item>@drawable/netuno</item>
+    </array>
+
+    <array name="curiosities">
+        <item planet="mercurio">As últimas pesquisas sobre Mercúrio feitas por cientistas apontam para a presença de gelo na superfície do planeta, ou seja, pode haver água em Mercúrio.</item>
+        <item planet="mercurio">Uma viagem espacial entre o planeta Terra e o planeta Mercúrio em uma espaçonave demoraria aproximadamente 64 dias.</item>
+        <item planet="mercurio">Mercúrio pode ser visto a olho nu do planeta Terra, porém essa observação tem que ser feita ao início da manhã e ao final da tarde, já que a luz do Sol ofusca o planeta.</item>
+
+        <item>Vênus é o planeta mais próximo da Terra.</item>
+        <item>A rotação de Vênus ocorre de leste para oeste, contrária a todos os planetas do Sistema Solar.</item>
+        <item>O planeta recebeu esse nome em homenagem à Vênus, a deusa romana da beleza e do amor.</item>
+
+        <item>70% de sua superfície são constituídos por água e 30%, por massa continental.</item>
+        <item>Sua forma é de geoide: esférica e levemente achatada nos polos.</item>
+        <item>Em sua porção externa, apresenta a litosfera, esfera rochosa; a atmosfera, esfera gasosa; a hidrosfera, esfera de água; e a biosfera, esfera da vida.</item>
+
+        <item>Um dia em Marte tem duração de 24 horas e 37 minutos, enquanto o ano possui 687 dias.</item>
+        <item>Marte possui uma fina camada atmosférica, composta principalmente por dióxido de carbono, nitrogênio e argônio.</item>
+        <item>A superfície marciana é rochosa, e por essa razão o planeta é considerado terroso. Sua coloração avermelhada é em decorrência da composição mineral dessas rochas.</item>
+
+        <item>O dia em Júpiter tem 10 horas de duração.</item>
+        <item>Ventos de 600 km/hora são comuns em Júpiter.</item>
+        <item>A massa de Júpiter é 2,5 vezes maior do que os outros sete planetas do Sistema Solar juntos. Um gigante.</item>
+
+        <item>O planeta possui um campo magnético 578 vezes mais poderoso do que o da Terra.</item>
+        <item>O formato circular dos anéis de Saturno e a manutenção de sua órbita são definidos pela presença das luas menores entre eles, mais especificamente pela força da gravidade desses satélites.</item>
+        <item>As luas Titã e Encélado têm grande potencial para abrigar vida, uma vez que possuem água e diferentes tipos de hidrocarbonetos em suas composições."</item>
+
+        <item>O movimento completo ao redor do Sol, chamado translação, realizado por Urano, dura incríveis 84 anos.</item>
+        <item>A cor azulada característica do planeta é resultado da absorção de luz realizada pelo gás metano, presente na composição do planeta.</item>
+        <item>Um dia em Urano tem duração de 17 horas terrestres, ou seja, o planeta leva 17 horas para girar em torno de si mesmo.</item>
+
+        <item>A superfície de Netuno é gasosa. Portanto, ao se tentar pisar em Netuno, é impossível ficar de pé por causa de sua estrutura formada basicamente por gases.</item>
+        <item>Em termos climáticos, Netuno é classificado pelos cientistas como o planeta mais frio do Sistema Solar, além de registrar os ventos mais fortes.</item>
+        <item>A coloração azulada de Netuno é resultado da combinação de gases, como o hidrogênio, o hélio e metano, com as baixas temperaturas.</item>
     </array>
 </resources>
