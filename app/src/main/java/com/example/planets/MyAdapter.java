@@ -12,9 +12,9 @@ import java.util.ArrayList;
 
 public class MyAdapter extends BaseAdapter {
     private LayoutInflater inflater;
-    private ArrayList<ListItem> data;
+    private ArrayList<Planet> data;
 
-    public MyAdapter(Context context, ArrayList<ListItem> data) {
+    public MyAdapter(Context context, ArrayList<Planet> data) {
         this.inflater = LayoutInflater.from(context);
         this.data = data;
     }
@@ -36,13 +36,13 @@ public class MyAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        ListItem item = data.get(i);
-        view = inflater.inflate(R.layout.item_layout, null);
+        Planet item = data.get(i);
+        view = inflater.inflate(R.layout.planets_list_layout, null);
 
         TextView textView = view.findViewById(R.id.textViewItem);
         ImageView imageView = view.findViewById(R.id.imageView);
 
-        textView.setText(item.getData());
+        textView.setText(item.getName());
         imageView.setImageResource(item.getImage());
 
         return view;

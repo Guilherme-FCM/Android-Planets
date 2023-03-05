@@ -1,3 +1,34 @@
 <resources>
     <string name="app_name">Planets</string>
+
+    <string name="mercurio">Mercúrio</string>
+    <string name="venus">Vênus</string>
+    <string name="terra">Terra</string>
+    <string name="marte">Marte</string>
+    <string name="jupiter">Júpiter</string>
+    <string name="saturno">Saturno</string>
+    <string name="urano">Urano</string>
+    <string name="netuno">Netuno</string>
+
+    <string-array name="planets">
+        <item>@string/mercurio</item>
+        <item>@string/venus</item>
+        <item>@string/terra</item>
+        <item>@string/marte</item>
+        <item>@string/jupiter</item>
+        <item>@string/saturno</item>
+        <item>@string/urano</item>
+        <item>@string/netuno</item>
+    </string-array>
+
+    <array name="planet_images">
+        <item>@drawable/mercurio</item>
+        <item>@drawable/venus</item>
+        <item>@drawable/terra</item>
+        <item>@drawable/marte</item>
+        <item>@drawable/jupiter</item>
+        <item>@drawable/saturno</item>
+        <item>@drawable/urano</item>
+        <item>@drawable/netuno</item>
+    </array>
 </resources>

@@ -1,20 +1,20 @@
 package com.example.planets;
 
-public class ListItem {
-    private String data;
+public class Planet {
+    private String name;
     private int image;
 
-    public ListItem(String data, int image) {
-        this.data = data;
+    public Planet(String name, int image) {
+        this.name = name;
         this.image = image;
     }
 
-    public String getData() {
-        return data;
+    public String getName() {
+        return name;
     }
 
-    public void setData(String data) {
-        this.data = data;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getImage() {
@@ -27,8 +27,8 @@ public class ListItem {
 
     @Override
     public String toString() {
-        return "ListItem{" +
-                "data='" + data + '\'' +
+        return "{" +
+                "name='" + name + '\'' +
                 ", image=" + image +
                 '}';
     }

@@ -1,5 +1,6 @@
 package com.example.planets;
 
+import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -12,7 +13,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
     private ListView listView;
-    private ArrayList<ListItem> data;
+    private ArrayList<Planet> data;
     private MyAdapter adapter;
 
     @Override
@@ -32,21 +33,19 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     }
 
     private void fillData() {
-        data = new ArrayList<ListItem>();
-        data.add(new ListItem("Item 1", R.drawable.ic_launcher_background));
-        data.add(new ListItem("Item 2", R.drawable.ic_launcher_background));
-        data.add(new ListItem("Item 3", R.drawable.ic_launcher_background));
-        data.add(new ListItem("Item 4", R.drawable.ic_launcher_background));
-        data.add(new ListItem("Item 5", R.drawable.ic_launcher_background));
-        data.add(new ListItem("Item 6", R.drawable.ic_launcher_background));
-        data.add(new ListItem("Item 7", R.drawable.ic_launcher_background));
-        data.add(new ListItem("Item 8", R.drawable.ic_launcher_background));
-        data.add(new ListItem("Item 9", R.drawable.ic_launcher_background));
+        data = new ArrayList<Planet>();
+        String[] planets = getResources().getStringArray(R.array.planets);
+        TypedArray images = getResources().obtainTypedArray(R.array.planet_images);
+        for (int i = 0; i < planets.length; i++) {
+            String planet = planets[i];
+            int image = images.getResourceId(i, 0);
+            data.add(new Planet(planet, image));
+        }
     }
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        ListItem item = (ListItem) adapterView.getItemAtPosition(i);
-        Toast.makeText(this, "Click em: " + item, Toast.LENGTH_SHORT).show();
+        Planet item = (Planet) adapterView.getItemAtPosition(i);
+        Toast.makeText(this, "Planeta selecionado: " + item, Toast.LENGTH_SHORT).show();
     }
 }
